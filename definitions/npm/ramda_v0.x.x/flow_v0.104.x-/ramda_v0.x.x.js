@@ -1788,6 +1788,7 @@ declare module ramda {
   ): Array<$ElementType<O, T>>;
 
   declare function set<T, V, U>(lens: Lens, x: T, val: V): U;
+  declare function set<T, V, U>(lens: Lens, x: T): (val: V) => U;
   declare function set<T, V, U>(
     lens: Lens
   ): ((x: (any) => mixed) => (val: V) => U) &
